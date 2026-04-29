@@ -15,6 +15,7 @@ export default function CanvasBackground() {
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
+    let firstFrameLoaded = false;
 
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
@@ -22,13 +23,26 @@ export default function CanvasBackground() {
       const indexStr = frameNum.toString().padStart(3, "0");
       img.src = `/sequence/ezgif-frame-${indexStr}.jpg`;
 
-      img.onload = () => {
+      const onLoadOrError = () => {
         loadedCount++;
-        if (loadedCount === FRAME_COUNT) {
-          setImages(loadedImages);
-          // Draw first frame immediately
+        
+        // Draw the very first frame as soon as it's ready, so the screen isn't blank
+        if (i === 0 && !firstFrameLoaded) {
+          firstFrameLoaded = true;
+          setImages([...loadedImages]);
           requestAnimationFrame(() => drawFrame(1, loadedImages));
         }
+
+        // Once all images have loaded (or errored), update state to enable full scrolling
+        if (loadedCount === FRAME_COUNT) {
+          setImages([...loadedImages]);
+        }
+      };
+
+      img.onload = onLoadOrError;
+      img.onerror = () => {
+        console.error(`Failed to load frame ${indexStr}`);
+        onLoadOrError();
       };
       
       loadedImages.push(img);
@@ -46,29 +60,31 @@ export default function CanvasBackground() {
     // Ensure index is within bounds
     const safeIndex = Math.max(1, Math.min(Math.floor(index), FRAME_COUNT));
     const img = imgArray[safeIndex - 1];
-    if (!img) return;
+    
+    // Only draw if image is fully loaded and has width
+    if (!img || !img.complete || img.naturalWidth === 0) return;
 
     const windowRatio = window.innerWidth / window.innerHeight;
     const imgRatio = img.width / img.height;
 
-    let drawWidth = canvas.width;
-    let drawHeight = canvas.height;
+    let drawWidth = canvas.width / (window.devicePixelRatio ? Math.min(window.devicePixelRatio, 2) : 1);
+    let drawHeight = canvas.height / (window.devicePixelRatio ? Math.min(window.devicePixelRatio, 2) : 1);
     let offsetX = 0;
     let offsetY = 0;
 
     if (windowRatio > imgRatio) {
-      // Fit to height (contain)
-      drawWidth = canvas.height * imgRatio;
-      drawHeight = canvas.height;
-      offsetX = (canvas.width - drawWidth) / 2;
+      // Fit to width to ensure it covers on mobile
+      drawWidth = window.innerWidth;
+      drawHeight = window.innerWidth / imgRatio;
+      offsetY = (window.innerHeight - drawHeight) / 2;
     } else {
-      // Fit to width (contain)
-      drawWidth = canvas.width;
-      drawHeight = canvas.width / imgRatio;
-      offsetY = (canvas.height - drawHeight) / 2;
+      // Fit to height
+      drawHeight = window.innerHeight;
+      drawWidth = window.innerHeight * imgRatio;
+      offsetX = (window.innerWidth - drawWidth) / 2;
     }
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     // Draw with slight opacity to keep it subtle
     ctx.globalAlpha = 0.5; 
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
@@ -83,15 +99,18 @@ export default function CanvasBackground() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (canvasRef.current && images.length > 0) {
-        const pixelRatio = window.devicePixelRatio || 1;
+      if (canvasRef.current) {
+        // Cap pixelRatio to 2 for mobile performance (prevents huge canvases on phones)
+        const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
         canvasRef.current.width = window.innerWidth * pixelRatio;
         canvasRef.current.height = window.innerHeight * pixelRatio;
         
         const ctx = canvasRef.current.getContext("2d");
         if (ctx) ctx.scale(pixelRatio, pixelRatio);
 
-        drawFrame(frameIndex.get(), images);
+        if (images.length > 0) {
+          drawFrame(frameIndex.get(), images);
+        }
       }
     };
     
