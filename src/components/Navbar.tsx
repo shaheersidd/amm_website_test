@@ -32,7 +32,7 @@ export default function Navbar() {
         backdropFilter: navBackdropFilter,
         borderColor: navBorder,
       }}
-      className="fixed top-8 left-0 right-0 z-50 transition-colors border-b flex items-center justify-between px-8 py-5"
+      className="fixed top-8 left-0 right-0 z-50 transition-colors border-b flex items-center justify-between px-8 py-2"
     >
       <a href="https://fsc.stevens.edu/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
         <div className="relative w-20 h-20 opacity-90 group-hover:opacity-100 transition-opacity">
