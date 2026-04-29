@@ -5,11 +5,13 @@ import Research from "@/components/Research";
 import Projects from "@/components/Projects";
 import Focus from "@/components/Focus";
 import People from "@/components/People";
+import TickerBar from "@/components/TickerBar";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen text-white font-sans selection:bg-nexus-cyan/30">
       <CanvasBackground />
+      <TickerBar />
       <Navbar />
       
       <div className="relative z-10 w-full h-full pt-10">
