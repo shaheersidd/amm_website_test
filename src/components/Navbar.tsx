@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -34,11 +35,16 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 transition-colors border-b flex items-center justify-between px-8 py-5"
     >
       <a href="https://fsc.stevens.edu/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
-        <div className="w-6 h-6 rounded bg-gradient-to-tr from-[#3B82F6] to-[#00D6FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity">
-          <div className="w-2.5 h-2.5 bg-[#050505] rounded-sm" />
+        <div className="relative w-8 h-8 opacity-90 group-hover:opacity-100 transition-opacity">
+          <Image 
+            src="/stevens-logo.png" 
+            alt="Stevens Institute of Technology Logo" 
+            fill 
+            className="object-contain"
+          />
         </div>
-        <span className="font-semibold text-lg tracking-tight text-white/90 group-hover:text-white transition-colors">
-          Hanlon Financial Systems <span className="text-white/50 font-normal">Lab</span>
+        <span className="font-bold text-lg tracking-tight text-white/90 group-hover:text-white transition-colors">
+          Hanlon Financial Systems Lab
         </span>
       </a>
 
