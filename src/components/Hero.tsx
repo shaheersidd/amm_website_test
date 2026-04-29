@@ -28,12 +28,12 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="px-6 py-3 bg-white text-black text-sm font-semibold rounded hover:bg-neutral-200 transition-colors w-full sm:w-auto">
+            <a href="https://fsc.stevens.edu/research/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white text-black text-sm font-semibold rounded hover:bg-neutral-200 transition-colors w-full sm:w-auto inline-flex items-center justify-center">
               Explore Research
-            </button>
-            <button className="px-6 py-3 bg-[#050505]/40 backdrop-blur-md border border-white/20 text-white text-sm font-medium rounded hover:bg-white/10 transition-colors w-full sm:w-auto">
+            </a>
+            <a href="https://fsc.stevens.edu/publications/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-[#050505]/40 backdrop-blur-md border border-white/20 text-white text-sm font-medium rounded hover:bg-white/10 transition-colors w-full sm:w-auto inline-flex items-center justify-center">
               View Publications
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

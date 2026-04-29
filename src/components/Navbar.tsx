@@ -56,9 +56,9 @@ export default function Navbar() {
       </nav>
 
       <div>
-        <button className="px-5 py-2 font-medium text-sm text-white/90 border border-white/10 rounded hover:bg-white/5 transition-colors">
+        <a href="https://fsc.stevens.edu/publications/" target="_blank" rel="noopener noreferrer" className="px-5 py-2 font-medium text-sm text-white/90 border border-white/10 rounded hover:bg-white/5 transition-colors inline-block">
           View Publications
-        </button>
+        </a>
       </div>
     </motion.header>
   );

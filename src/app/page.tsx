@@ -25,9 +25,9 @@ export default function Home() {
             Collaborate. Build. Understand.
           </h2>
           <div className="flex justify-center gap-4 mb-20 pointer-events-auto">
-            <button className="px-6 py-3 bg-white text-black font-semibold rounded hover:bg-neutral-200 transition-colors">
+            <a href="https://fsc.stevens.edu/publications/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white text-black font-semibold rounded hover:bg-neutral-200 transition-colors inline-block">
               Read Publications
-            </button>
+            </a>
             <button className="px-6 py-3 bg-transparent border border-white/20 text-white font-medium rounded hover:bg-white/5 transition-colors">
               Join the Lab
             </button>
