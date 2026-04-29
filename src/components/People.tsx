@@ -8,7 +8,7 @@ const peopleData = [
   { name: 'Dr Ionut Florescu', role: 'Director HFSL', image: '/people/if.jpeg' },
   { name: 'Dr. Zachary Feinstein', role: 'Associate Professor', image: '/people/zf.jpeg' },
   { name: 'Hao Fu', role: 'FE Phd Candidate', image: '/people/hao.jpeg' },
-  { name: 'marina georgiou', role: 'FE Phd Candidate', image: '/people/marina.jpeg' },
+  { name: 'Marina Georgiou', role: 'FE Phd Candidate', image: '/people/marina.jpeg' },
   { name: 'Sean\'o Leary', role: 'FE Phd Candidate', image: '/people/sean.jpeg' },
   { name: 'Matthew Thomas', role: 'FE PhD Candidate', image: '/people/matthew.jpeg' },
 ];
