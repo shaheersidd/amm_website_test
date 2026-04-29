@@ -5,12 +5,12 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 
 const peopleData = [
-  { name: 'Dr Ionut Florescu', role: 'Director HFSL', image: '/people/if.jpeg' },
-  { name: 'Dr. Zachary Feinstein', role: 'Associate Professor', image: '/people/zf.jpeg' },
-  { name: 'Hao Fu', role: 'FE Phd Candidate', image: '/people/hao.jpeg' },
-  { name: 'Marina Georgiou', role: 'FE Phd Candidate', image: '/people/marina.jpeg' },
-  { name: 'Sean\'o Leary', role: 'FE Phd Candidate', image: '/people/sean.jpeg' },
-  { name: 'Matthew Thomas', role: 'FE PhD Candidate', image: '/people/matthew.jpeg' },
+  { name: 'Dr Ionut Florescu', role: 'Director HFSL', image: '/people/if.jpeg', linkedin: 'https://www.linkedin.com/in/dr-ionut-florescu-56271315/' },
+  { name: 'Dr. Zachary Feinstein', role: 'Associate Professor', image: '/people/zf.jpeg', linkedin: 'https://www.linkedin.com/in/zachary-feinstein-36a6433a/' },
+  { name: 'Hao Fu', role: 'FE Phd Candidate', image: '/people/hao.jpeg', linkedin: 'https://www.linkedin.com/in/hao-fu-4057b02a9/' },
+  { name: 'Marina Georgiou', role: 'FE Phd Candidate', image: '/people/marina.jpeg', linkedin: 'https://www.linkedin.com/in/geomarina/' },
+  { name: 'Sean\'o Leary', role: 'FE Phd Candidate', image: '/people/sean.jpeg', linkedin: 'https://www.linkedin.com/in/sean-o-leary-14155821b/' },
+  { name: 'Matthew Thomas', role: 'FE PhD Candidate', image: '/people/matthew.jpeg', linkedin: 'https://www.linkedin.com/in/matthewthomask/' },
 ];
 
 const People = () => {
@@ -71,9 +71,12 @@ const People = () => {
           className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
           {peopleData.map((person, index) => (
-            <div 
+            <a 
               key={index} 
-              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 snap-start flex flex-col items-center"
+              href={person.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 snap-start flex flex-col items-center cursor-pointer block"
             >
               <div className="w-36 h-36 rounded-full bg-white/10 mb-6 overflow-hidden relative mx-auto border border-white/20 shrink-0">
                 {/* Fallback avatar if image isn't uploaded yet */}
@@ -91,7 +94,7 @@ const People = () => {
                 <h3 className="text-xl font-medium text-white tracking-wide">{person.name}</h3>
                 <p className="text-sm text-nexus-cyan/80 mt-2 font-mono uppercase tracking-wider">{person.role}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
