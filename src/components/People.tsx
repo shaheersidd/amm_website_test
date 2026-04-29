@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from 'react';
-import Image from 'next/image';
 
 const peopleData = [
   { name: 'Dr. Alice Smith', role: 'Lead Researcher', image: '/people/alice.jpg' },
