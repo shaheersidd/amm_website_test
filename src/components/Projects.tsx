@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "Opensource Blockchain Dataset",
-    description: "Removing technical barriers and paywalls for researchers around the world to access all blockchain transactions created on Ethereum, polygon and more using our opensource datasets.",
+    description: "Removing technical barriers and paywalls for researchers around the world to access all blockchain transactions created on Ethereum, Polygon and more using our opensource datasets.",
     status: "Beta Testing",
     statusColor: "text-nexus-blue",
     statusBg: "bg-nexus-blue/10 border-nexus-blue/20",

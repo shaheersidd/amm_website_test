@@ -4,26 +4,26 @@ import { motion } from "framer-motion";
 
 const researchPapers = [
   {
-    title: "Dynamic Fees in AMMs: Mechanism Design for High Volatility",
-    abstract: "We propose a novel fee adjustment mechanism for Automated Market Makers that structurally mitigates toxic flow during extreme market volatility.",
-    authors: "Alice Chen, Bob Roberts, Charlie Davis",
-    tag: "AMM / Mechanism Design",
+    title: "AMM Fee Analysis",
+    abstract: "Automated Market Makers (AMMs) are a type of decentralized exchange. They can offer a safe venue for exchanging with potentially lower costs compared to traditional exchanges. But their success depends a lot on how fees are set.",
+    authors: "Marina Georgiou, Dr. Zachary Feinstein",
+    tag: "AMM / Fee Structure",
     link: "#",
   },
   {
-    title: "Liquidity Fragmentation Across L2s: An Empirical Study",
-    abstract: "An analysis of how liquidity disperses across prominent Layer 2 rollups and the resulting impact on slippage and user routing efficiency.",
-    authors: "Dr. Eve Wright, Alice Chen",
-    tag: "Liquidity / Ethereum",
+    title: "Prediction Markets",
+    abstract: "Implied fee structure for binary prediction market (GBM-digital option) with implications for optimal liquidity provision. Certain prediction markets can be represented as the markets of digital options. While many modern prediction markets operate with Limit Order Books, they can also function as Automated Market Makers (AMMs).",
+    authors: "Nazarii Tretiak, Dr Ionut Florescu, Dr Zachary Feinstein",
+    tag: "Prediction Markets / Options",
     link: "#",
   },
   {
-    title: "Beyond CPMM: Non-linear Invariant Curves for Pegged Assets",
-    abstract: "Exploring alternative invariant functions that maximize localized capital efficiency for heavily correlated asset pairs.",
-    authors: "Charlie Davis, Frank Miller",
-    tag: "Stablecoins / Math",
+    title: "AMM-ETF",
+    abstract: "This project explores the design and performance of an Automated Market Maker–based Exchange Traded Fund (AMM-ETF). The central idea is to replace traditional portfolio rebalancing, which incurs explicit costs for fund managers, with an AMM mechanism that maintains target weights passively.",
+    authors: "Sean'o Leary, Dr Zachary Feinstein",
+    tag: "AMM / ETF Design",
     link: "#",
-  }
+  },
 ];
 
 export default function Research() {

@@ -11,6 +11,7 @@ const peopleData = [
   { name: 'Marina Georgiou', role: 'FE Phd Candidate', image: '/people/marina.jpeg', linkedin: 'https://www.linkedin.com/in/geomarina/' },
   { name: 'Sean\'o Leary', role: 'FE Phd Candidate', image: '/people/sean.jpeg', linkedin: 'https://www.linkedin.com/in/sean-o-leary-14155821b/' },
   { name: 'Matthew Thomas', role: 'FE PhD Candidate', image: '/people/matthew.jpeg', linkedin: 'https://www.linkedin.com/in/matthewthomask/' },
+  { name: 'Nazarii Tretiak', role: 'FE PhD Candidate', image: '/people/nt.jpeg', linkedin: '#' },
 ];
 
 const People = () => {
