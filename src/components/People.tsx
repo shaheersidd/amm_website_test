@@ -2,13 +2,15 @@
 
 import React, { useRef } from 'react';
 
+import Image from 'next/image';
+
 const peopleData = [
-  { name: 'Dr. Alice Smith', role: 'Lead Researcher', image: '/people/alice.jpg' },
-  { name: 'Dr. Bob Jones', role: 'Protocol Architect', image: '/people/bob.jpg' },
-  { name: 'Carol Williams', role: 'Cryptography Lead', image: '/people/carol.jpg' },
-  { name: 'David Brown', role: 'Systems Engineer', image: '/people/david.jpg' },
-  { name: 'Eve Davis', role: 'DeFi Analyst', image: '/people/eve.jpg' },
-  { name: 'Frank Miller', role: 'Quantitative Researcher', image: '/people/frank.jpg' },
+  { name: 'Dr Ionut Florescu', role: 'Director HFSL', image: '/people/if.jpeg' },
+  { name: 'Dr. Zachary Feinstein', role: 'Associate Professor', image: '/people/zf.jpeg' },
+  { name: 'Hao Fu', role: 'FE Phd Candidate', image: '/people/hao.jpeg' },
+  { name: 'marina georgiou', role: 'FE Phd Candidate', image: '/people/marina.jpeg' },
+  { name: 'Sean\'o Leary', role: 'FE Phd Candidate', image: '/people/sean.jpeg' },
+  { name: 'Matthew Thomas', role: 'FE PhD Candidate', image: '/people/matthew.jpeg' },
 ];
 
 const People = () => {
@@ -78,18 +80,12 @@ const People = () => {
                 <div className="absolute inset-0 flex items-center justify-center text-5xl font-light text-white/40 bg-nexus-dark">
                   {person.name.charAt(0)}
                 </div>
-                {/* 
-                  TODO: When you upload images to public/people/, uncomment the Image component
-                  Make sure to add the correct file extensions in the peopleData array.
-                */}
-                {/*
                 <Image 
                   src={person.image} 
                   alt={person.name} 
                   fill 
                   className="object-cover relative z-10" 
                 />
-                */}
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-medium text-white tracking-wide">{person.name}</h3>
