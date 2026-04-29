@@ -44,7 +44,7 @@ export default function Navbar() {
           />
         </div>
         <span className="font-bold text-lg tracking-tight text-white/90 group-hover:text-white transition-colors">
-          Hanlon Financial Systems Lab
+          Hanlon Financial Systems Center
         </span>
       </a>
 

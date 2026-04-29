@@ -34,11 +34,11 @@ export default function Home() {
           </div>
 
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-white/40 border-t border-white/5 pt-8">
-            <p>University AMM Research Group</p>
+            <p>Hanlon Financial Systems Center · Stevens Institute of Technology</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Contact</a>
-              <a href="#" className="hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="hover:text-white transition-colors">GitHub</a>
+              <a href="https://www.linkedin.com/company/hanlon-financial-center-at-stevens-institute" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.youtube.com/channel/UCoO4aY5mmQyf2FE-SK8YHGQ" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">YouTube</a>
+              <a href="https://fsc.stevens.edu/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">HFSL</a>
             </div>
           </div>
         </footer>
