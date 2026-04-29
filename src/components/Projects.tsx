@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Open AMM Data Layer",
-    description: "A standard unified schema and open-source ingestion engine for normalizing tick-level liquidity events across all major EVM AMMs.",
+    title: "SHIFT-Anvil Extension",
+    description: "The Stevens High Frequency Trading (SHIFT) Market Simulation System is used for research pertaining to market microstructure, and for an annual high frequency trading competition (HFTC). The extension of SHIFT functionality to incorporate cryptocurrencies and automated market makers (AMMS).",
     status: "In Development",
     statusColor: "text-nexus-cyan",
     statusBg: "bg-nexus-cyan/10 border-nexus-cyan/20",
   },
   {
-    title: "On-chain Liquidity Analytics Platform",
-    description: "A public dashboard and research tool allowing granular analysis of liquidity concentration and LP profitability over time.",
+    title: "Opensource Blockchain Dataset",
+    description: "Removing technical barriers and paywalls for researchers around the world to access all blockchain transactions created on Ethereum, polygon and more using our opensource datasets.",
     status: "Beta Testing",
     statusColor: "text-nexus-blue",
     statusBg: "bg-nexus-blue/10 border-nexus-blue/20",
   },
   {
-    title: "Public DeFi Data APIs",
-    description: "Highly available endpoints offering aggregated historical MEV data and arbitrage route analyses for academic researchers.",
+    title: "On-chain Liquidity Analytics Platform",
+    description: "A public dashboard and research tool allowing granular analysis of liquidity concentration and LP profitability over time.",
     status: "Research Phase",
     statusColor: "text-white/70",
     statusBg: "bg-white/5 border-white/10",
