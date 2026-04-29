@@ -35,7 +35,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 transition-colors border-b flex items-center justify-between px-8 py-5"
     >
       <a href="https://fsc.stevens.edu/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
-        <div className="relative w-8 h-8 opacity-90 group-hover:opacity-100 transition-opacity">
+        <div className="relative w-14 h-14 opacity-90 group-hover:opacity-100 transition-opacity">
           <Image 
             src="/stevens-logo.png" 
             alt="Stevens Institute of Technology Logo" 
@@ -52,7 +52,6 @@ export default function Navbar() {
         <a href="#overview" className="hover:text-white transition-colors duration-300">Overview</a>
         <a href="#research" className="hover:text-white transition-colors duration-300">Research</a>
         <a href="#projects" className="hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#publications" className="hover:text-white transition-colors duration-300">Publications</a>
         <a href="#people" className="hover:text-white transition-colors duration-300">People</a>
       </nav>
 

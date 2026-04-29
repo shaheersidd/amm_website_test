@@ -31,7 +31,7 @@ const People = () => {
 
   return (
     // Removed bg-background to let the CanvasBackground show through
-    <section className="relative w-full py-24 overflow-hidden border-t border-white/5 z-10">
+    <section id="people" className="relative w-full py-24 overflow-hidden border-t border-white/5 z-10">
       <div className="max-w-6xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
         <div>
           <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
